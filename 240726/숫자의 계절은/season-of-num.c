@@ -4,13 +4,13 @@ int main() {
     int m;
     scanf("%d",&m);
 
-    if (m>=3 && m<=5)
-        printf("Spring");
-    else if (m>=6 && m<=8)
-        printf("Summer");
-    else if (m>=9 && m<=11)
-        printf("Fall");
-    else
-        printf("Winter");
+	if(m >= 12 || m <= 2) // 필터링 요소가 젤 큰 거부터 적용
+		printf("Winter");
+	else if(m <= 5)
+		printf("Spring");
+	else if(m <= 8)
+		printf("Summer");
+	else
+		printf("Fall");
     return 0;
 }
