@@ -1,14 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    float left,right,avg;
-    scanf("%lf %lf", &left, &right);
-    avg = (left+right)/2;
+    double avg;
+    scanf("%lf", &avg);
 
     if (avg >= 1.0)
         printf("High");
     else if (avg >= 0.5)
-        printf("Middle")
+        printf("Middle");
     else
         printf("Low");
 
