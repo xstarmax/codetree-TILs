@@ -8,15 +8,16 @@ int main() {
     scanf("%c %d", &p2, &t2);
     scanf("%c %d", &p3, &t3);
 
-    if (p1 == 'Y' && t1 >= 37)
+    if (p1 == 'Y' && t1 >= 37) // 1번이 A
     {
-        if (p2 == 'Y' && t1 >= 37) || (p3 == 'Y' && t1 >= 37)
-            print("E");
+        if ((p2 == 'Y' && t2 >= 37) || (p3 == 'Y' && t3 >= 37))
+            printf("E");
         else
-            print("N");
+            printf("N");
     }
+    else if ((p2 == 'Y' && t2 >= 37) && (p3 == 'Y' && t3 >= 37))
+        printf("E");
     else
-        print("N");
-        
+        printf("N");
     return 0;
 }
