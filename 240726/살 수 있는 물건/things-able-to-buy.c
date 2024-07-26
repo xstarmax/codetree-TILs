@@ -8,5 +8,7 @@ int main() {
         printf("book");
     else if (money >= mask)
         printf("mask");
+    else
+        printf("no");
     return 0;
 }
