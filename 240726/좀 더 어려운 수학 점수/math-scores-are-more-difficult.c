@@ -2,7 +2,8 @@
 
 int main() {
     int math1, eng1, math2, eng2;
-    scanf("%d %d %d %d", &math1, &eng2, &math2, &eng2);
+    scanf("%d %d", math1, eng1);
+    scanf("%d %d", math2, eng2);
 
     if (math1 == math2)
         printf("%s", (eng1>eng2)? "A": "B");
