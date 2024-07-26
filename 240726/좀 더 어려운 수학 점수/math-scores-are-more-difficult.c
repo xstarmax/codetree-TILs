@@ -4,12 +4,10 @@ int main() {
     int math1, eng1, math2, eng2;
     scanf("%d %d %d %d", &math1, &eng2, &math2, &eng2);
 
-    if (math1 > math2)
-        printf("A");
-    else if ((math1 == math2) && (eng1 > eng2))
-        printf("A");
+    if (math1 == math2)
+        printf("%s", (eng1>eng2)? "A": "B");
     else
-        printf("B");
+        printf("%s", (math1>math2)? "A": "B");
 
     return 0;
 }
