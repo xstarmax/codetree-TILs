@@ -4,7 +4,7 @@ int main() {
     int a,b,c,min;
     scanf("%d %d %d", &a, &b, &c);
 
-    if (a<=b && b<=c)
+    if (a<=b && a<=c)
         min = a;
     else if (b<=a && b<=c)
         min = b;
