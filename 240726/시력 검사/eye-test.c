@@ -2,7 +2,7 @@
 
 int main() {
     double left,right;
-    scanf("%d %d",&left, &right);
+    scanf("%lf %lf",&left, &right);
 
     if (left >= 1.0 && right >= 1.0)
         printf("High");
