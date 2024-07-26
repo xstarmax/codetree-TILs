@@ -9,7 +9,7 @@ int main() {
     else if (num >= 100)
         printf("vapor");
     else    
-        print("water");
+        printf("water");
 
     return 0;
 }
