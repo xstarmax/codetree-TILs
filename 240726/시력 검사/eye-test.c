@@ -6,7 +6,7 @@ int main() {
 
     if (left >= 1.0 && right >= 1.0)
         printf("High");
-    else if (left >= 0.5 && right >= 0.5);
+    else if (left >= 0.5 && right >= 0.5)
         printf("Middle");
     else
         printf("Low");
