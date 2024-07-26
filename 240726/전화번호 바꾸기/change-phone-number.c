@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    int a,b,c;
-    scanf("%d-%d-%d",&a,&b,&c);
-    printf("0%d-%d-%d",a,c,b);
+    int a,b;
+    scanf("010-%d-%d",&a,&b);
+    printf("010-%d-%d",b,a);
     return 0;
 }
