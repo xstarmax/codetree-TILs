@@ -2,11 +2,7 @@
 
 int main() {
     int point;
-    char[10] = result;
-
     scanf("%d", &point);
-    result = (point == 100)? pass: failure;
-
-    printf("result");
+    printf("%s", (point == 100)? "pass":"failure");
     return 0;
 }
