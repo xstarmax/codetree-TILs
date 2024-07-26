@@ -2,10 +2,9 @@
 
 int main() {
     int a,b;
-    double sum, diff;
     scanf("%d %d",&a,&b);
 
-    printf("%.2lf", (double)(a+b)/(double)(a-b));
+    printf("%.2lf", (double)(a+b)/(a-b));
 
     return 0;
 }
