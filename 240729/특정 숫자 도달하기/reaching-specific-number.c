@@ -12,7 +12,7 @@ int main() {
         count += 1;
     }
 
-    double avg = sum / count;
+    double avg = (double)sum / count;
 
     printf("%d %.1lf", sum, avg);
 
