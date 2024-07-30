@@ -8,5 +8,6 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
         System.out.printf("%d%d",a,b);
+        // System.out.println(a + "" + b);
     }
 }
