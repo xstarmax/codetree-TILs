@@ -3,6 +3,6 @@ public class Main {
         int a = 3;
         char b = 'C';
 
-        System.out.print("%d...%c",a,b);
+        System.out.printf("%d...%c",a,b);
     }
 }
