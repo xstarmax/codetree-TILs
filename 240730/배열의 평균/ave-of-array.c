@@ -8,7 +8,7 @@ int main() {
     {
         for (int j=0; j<4; j++)
         {
-            scanf("%d ", &arr[i][j]);
+            scanf("%d", &arr[i][j]);
         }
     }
 
@@ -49,6 +49,6 @@ int main() {
         }
     }
     printf("%.1lf ", (double)(avg/cnt));
-    
+
     return 0;
 }
