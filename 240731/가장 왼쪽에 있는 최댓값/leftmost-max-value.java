@@ -1,42 +1,43 @@
 import java.util.Scanner;
 
 public class Main {
+    public static final int MAX_N = 1000;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // 초기 배열 크기
-        int size = sc.nextInt();
+        int n;
+        int[] a = new int[MAX_N];
+
+        n = sc.nextInt();
+
+        for(int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
         
-        // 원소 입력 -> 배열 완성
-        int[] arr = new int[size];
-        for (int i=0; i<size; i++) {
-            arr[i] = sc.nextInt();
-        }
+        int prevMaxIdx = n;
 
-        // 첫번째 최댓값 찾기 (인덱스 위치)
-        int max = -1;
-        for (int i=0; i<size; i++) {
-            if (arr[i] >= max)
-                max = arr[i];
+        // 첫 번째 원소가 최대가 되기 전까지 계속 반복합니다.
+        while(true) {
+            // 최대값 후보의 시작은 항상 첫 번째 원소입니다.
+            int maxIdx = 0;
+            
+            // 두 번째 원소부터 바로 직전 최대로 뽑힌
+            // 원소 전까지 보면서 그 중 최대 index를 갱신합니다.
+            // index를 오름차순으로 보기 때문에
+            // 최댓값이 여러개인 경우 가장 왼쪽에 있는
+            // 원소가 뽑히게 됩니다.
+            for(int i = 1; i < prevMaxIdx; i++)
+                if(a[i] > a[maxIdx])
+                    maxIdx = i;
+            
+            System.out.print((maxIdx + 1) + " ");
+            
+            // 최대인 원소가 첫 번째 원소라면 종료합니다.
+            if(maxIdx == 0)
+                break;
+            
+            // 바로 직전 최대 index를 갱신해줍니다.
+            prevMaxIdx = maxIdx;
         }
-        // 첫번째 최댓값의 인덱스 위치 찾기
-        int loc = -1;
-        for (int i=0; i<size; i++) {
-            if (arr[i] == max) {
-                loc = i;
-                break; // 처음꺼 찾으면 더 탐색 안 함
-            }
-        }
-        System.out.print(loc+1 + " ");
-
-        // 두번째 최댓값 찾기
-        max = -1;
-        for (int i=loc; i>=0; i--) {
-            // 최초의 최댓값 있던 자리에서부터 역순으로 탐색
-            if (arr[i] >= max) {
-                loc = i;
-            }
-        }
-        System.out.print(loc+1);
     }
 }
