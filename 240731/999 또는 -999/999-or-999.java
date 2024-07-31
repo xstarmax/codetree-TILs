@@ -11,12 +11,17 @@ public class Main {
         // 두번째 입력부터 minVal, maxVal 초기화
         for (int i=0; i<100; i++) {
             int val = sc.nextInt();
-            if (val > maxVal) {
-                maxVal = val;
+            if (val == 999 || val == -999) {
+                break;
+            } else {
+                if (val > maxVal) {
+                    maxVal = val;
+                }
+                else if (val < minVal) {
+                    minVal = val;
+                }
             }
-            else if (val < minVal) {
-                minVal = val;
-            }
+
         }
 
         // 최종 출력
