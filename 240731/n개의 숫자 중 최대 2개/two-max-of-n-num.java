@@ -20,7 +20,7 @@ public class Main {
             max2 = arr[1];
         } else {
             max1 = arr[1];
-            max2 = arr[2];
+            max2 = arr[0];
         }
 
         // 3번째부터 끝까지보면서 max1, max2값 갱신
