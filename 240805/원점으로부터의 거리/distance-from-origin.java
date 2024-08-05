@@ -13,14 +13,13 @@ class Dot implements Comparable<Dot> {
     
     @Override
     public int compareTo(Dot o) {
-        if (o.x < 0)
-            o.x = -(o.x);
-        if (o.y < 0)
-            o.y = - (o.y);
-        if ((this.x + this.y) != (o.y + o.x))
-            return Integer.compare(o.n, this.n);
+        int thisDistance = Math.abs(this.x) + Math.abs(this.y);
+        int otherDistance = Math.abs(o.x) + Math.abs(o.y);
+
+        if (thisDistance == otherDistance)
+            return this.n - o.n;
         else
-            return (this.x + this.y) - (o.y + o.x);
+            return thisDistance - otherDistance;
     }
 }
 
