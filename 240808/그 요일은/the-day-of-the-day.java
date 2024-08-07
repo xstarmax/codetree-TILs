@@ -25,25 +25,21 @@ public class Main {
         aft += d2;
 
         // 차이 계산
-        int diff = aft - pre;
+        int diff = aft - pre; // 33
+        
+        int body = diff / 7; // 4
+        int rest  = diff % 7;  // 5
 
-        // 8월 12일부터 8월 31일까지, 목요일 diff = 23; ans = 3;
+        // 8월 12일부터 8월 31일까지, 목요일 diff = 19; body= 2; rest=5
         String[] str = new String[]{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
-        int idx = -1;
 
-        for (int i=0; i< str.length; i++) {
+        int ans = body;
+        for (int i=0; i<=rest; i++) {
             if (str[i].equals(tar)) {
-                idx = i;
-                break;
+                ans++;
             }
         }
 
-        int ans = (diff / 7);
-        if (ans == 0 && ans%7 < idx) {
-            ans = 0;
-        } else if (ans == 0 && ans%7 >= idx) {
-            ans = 1;
-        }
         System.out.print(ans);
     }
 }
