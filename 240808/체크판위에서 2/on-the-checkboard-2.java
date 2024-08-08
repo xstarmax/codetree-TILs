@@ -15,23 +15,23 @@ public class Main {
             }
         }
 
-        // 처음 위치는 (0,0)이라고 생각하고...
+        // st = a[0][0]
+        // ed = a[r-1][c=1]
         int cnt=0;
-        for (int i=1; i<r-2; i++) {
+        for (int i=1; i<r-2; i++) { // 사실상 3번째 for문을 돌면서부터 r-1에 걸리기 때문에 i<r로 두어도 무방
             for (int j=1; j<c-2; j++) {
-                if (arr[i][j] != arr[0][0]) {
                     for (int oi=i+1; oi<r-1; oi++) {
                         for (int oj=j+1; oj<c-1; oj++) {
-                            if (arr[oi][oj] != arr[i][j])
+                            // 색이 계속 달라지는 경우에만 개수를 세줌
+                            if (arr[0][0] != arr[i][j] &&
+                                arr[i][j] != arr[oi][oj] &&
+                                arr[oi][oj] != arr[r-1][c-1])
                                 cnt++;
                         }
                     }
                 }
             }
-            
-        }
         System.out.print(cnt);
-        
     }
 }
 
