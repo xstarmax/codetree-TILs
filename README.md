@@ -9,7 +9,10 @@
 - Novice Mid > 3단원 정렬 전부
 
 ### 3회차 (24.08.02)
-- Novice Mide > 4단원 시뮬레이션Ⅰ
+- Novice Mid > 4단원 시뮬레이션Ⅰ
+
+### 4회차 (24.08.06)
+- Novice Mid > 5단원 시뮬레이션 Ⅱ > dx,dy technique
 
 ## 메모
 - c로 풀고 과제는 java로 다시 풀어서 내기...
